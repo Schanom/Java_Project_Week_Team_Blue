@@ -106,6 +106,10 @@ public class UserInterface {
                     newChoice=performActionL1(choice);
                     if (newChoice==0){
                         exit=true;
+                    }else{
+                        if (newChoice==1){
+                            choice=1;
+                        }
                     }
                     exit = false;
                     break;
@@ -206,7 +210,7 @@ public class UserInterface {
                 }
 
                 case 0: {
-                    System.out.println("Thanks for running the Application!");
+                    //System.out.println("Thanks for running the Application!");
                     newChoice=0;
                     exit = true;
                     break;
@@ -284,7 +288,7 @@ public class UserInterface {
                     break;
                 }
                 case 0: {
-                    System.out.println("Thanks for running the Application!");
+                    //System.out.println("Thanks for running the Application!");
                     newChoice=0;
                     exit = true;
                     break;
