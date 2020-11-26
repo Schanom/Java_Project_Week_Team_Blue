@@ -277,6 +277,7 @@ public class UserInterface {
                 }
                 case 8: {
 
+                    Event.getReport("C:\\Users\\kaul\\IdeaProjects\\Java_Project_Week_Team_Blue\\AllEvents.txt");
                     System.out.println("You choose option 8!");
                     newChoice=1;
                     exit = true;
