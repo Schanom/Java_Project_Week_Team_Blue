@@ -1,3 +1,5 @@
+import java.io.FileWriter;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -336,6 +338,35 @@ public class Event {
             }
         }
     }
+
+    public static boolean getReport(String nameofFile) {
+        //
+        try {
+
+            FileWriter file = new FileWriter(nameofFile);
+            for (Event item : allEvents)
+             file.write("\n" +item);
+
+            //if (count == 0) {
+               // file.write("No Items Found");
+            //}
+            file.close();
+            System.out.println("Sucessfully Wrote to the File");
+            return true;
+
+        } catch (IOException e) {
+            System.err.println("An error occurred during writing into the file.");
+            e.printStackTrace();
+            return false;
+
+        }
+    }
+
+
+
+
+
+
 
     @Override
     public String toString() {
