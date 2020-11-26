@@ -1,7 +1,9 @@
+import java.util.HashMap;
 import java.util.Scanner;
 
 
 public class UserInterface {
+    User user = new User("kiri","lion","@gmail.com");
 
     public UserInterface() {}
 
@@ -149,14 +151,14 @@ public class UserInterface {
                     break;
                 }
                 case 2: {
-                    // method call for create event
+                    Event.createEvent();
                     System.out.println("You choose option 2!");
                     newChoice=1;
                     exit = true;
                     break;
                 }
                 case 3: {
-                    // method call for set event status
+                    Event.editEventDateStatus();
                     System.out.println("You choose option 3!");
                     newChoice=1;
                     exit = true;
@@ -195,7 +197,8 @@ public class UserInterface {
                     break;
                 }
                 case 3: {
-                    //method call is missing
+
+                    Event.addUsertoEvent(user);
                     System.out.println("You choose option 3!");
                     newChoice=2;
                     exit = true;
@@ -203,7 +206,7 @@ public class UserInterface {
                 }
 
                 case 0: {
-                    //System.out.println("Thanks for running the Application!");
+                    System.out.println("Thanks for running the Application!");
                     newChoice=0;
                     exit = true;
                     break;
@@ -224,7 +227,7 @@ public class UserInterface {
                 case 1: {
 
                     //method call for display all events
-                    System.out.println("You choose option 1!");
+                    Event.DisplayAllEvents();
                     newChoice=1;
                     exit = true;
                     break;
@@ -237,50 +240,50 @@ public class UserInterface {
                     break;
                 }
                 case 3: {
-                    // method call for display all booked out events
+                   Event.displayBookedOutEvents();
                     System.out.println("You choose option 3!");
                     newChoice=1;
                     exit = true;
                     break;
                 }
                 case 4: {
-                    // method call for display all events with opened spots
-                    System.out.println("You choose option 4!");
+                    Event.displayAllEventsWithOpenSpots();
+
                     newChoice=1;
                     exit = true;
                     break;
                 }
                 case 5: {
-                    // method call for display upcoming events
-                    System.out.println("You choose option 5!");
+                    Event.displayUpcomingEvents();
+
                     newChoice=1;
                     exit = true;
                     break;
                 }
                 case 6: {
-                    // method call for display cancelled events
-                    System.out.println("You choose option 6!");
+                    Event.displayCancelledEvents();
+
                     newChoice=1;
                     exit = true;
                     break;
                 }
 
                 case 7: {
-                    // event price pool
+                    Event.DisplayPricePoolEvent();
                     System.out.println("You choose option 7!");
                     newChoice=1;
                     exit = true;
                     break;
                 }
                 case 8: {
-                    // event price pool
+
                     System.out.println("You choose option 8!");
                     newChoice=1;
                     exit = true;
                     break;
                 }
                 case 0: {
-                    //System.out.println("Thanks for running the Application!");
+                    System.out.println("Thanks for running the Application!");
                     newChoice=0;
                     exit = true;
                     break;

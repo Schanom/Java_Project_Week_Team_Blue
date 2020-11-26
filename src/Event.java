@@ -286,7 +286,7 @@ public class Event {
         System.out.println("All Upcoming Events");
         for(int i=0;i<allEvents.size();i++){
             if (allEvents.get(i).getEventStatus()==Status.UPCOMING){
-                System.out.println(allEvents.get(i));
+                System.out.println(allEvents.get(i).getEventName());
             }
         }
     }
@@ -295,7 +295,7 @@ public class Event {
         System.out.println("All Cancelled Events");
         for(int i=0;i<allEvents.size();i++){
             if(allEvents.get(i).getEventStatus()==Status.CANCELLED){
-                System.out.println(allEvents.get(i));
+                System.out.println(allEvents.get(i).getEventName());
             }
         }
     }

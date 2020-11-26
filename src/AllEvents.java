@@ -50,7 +50,7 @@ public class AllEvents {
         //Event.displayUpcomingEvents();
         //Event.displayCancelledEvents();
         // Event.addUsertoEvent(user);
-        Event.displayBookedOutEvents();
+       // Event.displayBookedOutEvents();
         //e1.addUsertoEvent(user1);
 
         //Event.DisplayPricePoolEvent();
