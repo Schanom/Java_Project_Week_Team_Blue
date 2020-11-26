@@ -158,8 +158,9 @@ public class UserInterface {
                     break;
                 }
                 case 3: {
+                    System.out.println(Event.allEvents);
                     Event.editEventDateStatus();
-                    System.out.println("You choose option 3!");
+                    System.out.println(Event.allEvents);
                     newChoice=1;
                     exit = true;
                     break;
@@ -169,7 +170,6 @@ public class UserInterface {
                     exit = true;
                     break;
                 }
-
             }
         }
         return newChoice;

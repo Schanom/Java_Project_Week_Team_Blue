@@ -138,39 +138,21 @@ public class Event {
     }
 
     public static void editEventDateStatus(){
-        System.out.println("type Event Name to edit date and status");
+        System.out.println("type Event Name to edit status");
         Scanner in = new Scanner(System.in);
         String eventName1 = in.nextLine();
 
         for (int i = 0; i < allEvents.size(); i++){
             if (eventName1.toUpperCase().equals(allEvents.get(i).eventName.toUpperCase())) {
                 System.out.println("current status is " + allEvents.get(i).getEventStatus() + " and date is " + allEvents.get(i).getEventDate());
-                System.out.println("Would you like to change them?");
-                System.out.println("1.Yes");
-                System.out.println("2.No");
 
-                int choice = in.nextInt();
-                switch (choice){
-                    case 1:
                         System.out.println("Type new status of event");
                         String eventstatus = in.next();
                         Status status = Status.valueOf(eventstatus.toUpperCase());
                         allEvents.get(i).setEventStatus(status);
-
-                        System.out.println("Type new date of event(DD/MM/YYYY)");
-                        Scanner ins = new Scanner(System.in);
-                        String date1 = ins.nextLine();
-                        DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("d/MM/yyyy");
-                        LocalDate newDate1 = LocalDate.parse(date1, formatter1);
-                        allEvents.get(i).setEventDate(newDate1);
-                        break;
-                    case 2:
-
-                        break;
                 }
             }
         }
-    }
 
     // getter | setter
 

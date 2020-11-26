@@ -58,8 +58,9 @@ public class AllEvents {
         //Event.DisplayPricePoolEvent();
 
         //Event.DisplayAllEvents();
-        //Event.editEventDateStatus();
-
+        System.out.println(allEvents);
+        Event.editEventDateStatus();
+        System.out.println(allEvents);
 
 
     }
